@@ -11,7 +11,7 @@ func main() {
 	port := flag.Int("port", 8080, "port server listens on")
 	flag.Parse()
 	fmt.Printf("listening on port %d\n", *port)
-	http.HandleFunc("/log", logHandler)
+	http.HandleFunc("/", logHandler)
 	http.ListenAndServe(fmt.Sprintf(":%d", *port), nil)
 }
 
